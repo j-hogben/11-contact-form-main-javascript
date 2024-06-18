@@ -88,8 +88,8 @@ label:not(.arrow-pointer), input, textarea, .submit-button {
   cursor: pointer;
 }
 
-/* Display block for text and email input */
-input[type="text"], input[type="email"] {
+/* Display block for text and email inputs, and query type label */
+input[type="text"], input[type="email"], .query-header-label {
   display: block;
 }
 
@@ -145,6 +145,60 @@ h1 {
 .fw-bold { 
   font-weight: bold; 
 }
+
+/* FORM SPACING */
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+}
+
+/* GRID LAYOUT */
+.grid-container {
+  --column-gap: var(--sp-200);
+  --row-gap: var(--sp-300);
+
+  display: grid;
+  column-gap: var(--column-gap);
+  row-gap: var(--row-gap);
+
+  .query-type {
+    display: grid;
+  }
+}
+
+@media (min-width: 30em) {  
+  .fname-grid-item { grid-area: fname; }
+  .lname-grid-item { grid-area: lname; }
+  .email-grid-item { grid-area: email; }
+  .query-grid-item { grid-area: query; }
+  .message-grid-item { grid-area: message; }
+  .consent-grid-item { grid-area: consent; }
+  .submit-grid-item { grid-area: submit; }
+
+  .grid-container {
+    grid-template-areas: 
+    "fname lname"
+    "email email"
+    "query query"
+    "message message"
+    "consent consent"
+    "submit submit";
+  }
+
+  .query-type {
+    grid-template-columns: subgrid;
+    column-gap: var(--column-gap);
+
+    .query-general {
+      grid-column: 1 / 2;
+    }
+
+    .query-support {
+      grid-column: 2 / 3;
+    }
+  }
+}
+
 
 /* ERROR STATES */
 .error-message {

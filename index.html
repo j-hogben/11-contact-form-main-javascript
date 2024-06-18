@@ -44,15 +44,17 @@
 
       <div class="query-grid-item">
         <label class="query-header-label arrow-pointer">Query Type</label>
-        <label for="general" class="fs-body-m">
-          <input type="radio" name="query" id="general" value="general">
-          General Enquiry
-        </label>
-        <label for="support" class="fs-body-m">
-          <input type="radio" name="query" id="support" value="support">
-          Support Request
-        </label>
-        <p class="error-message">Please select a query type</p>
+        <div class="query-type">
+          <label for="general" class="fs-body-m query-general">
+            <input type="radio" name="query" id="general" value="general">
+            General Enquiry
+          </label>
+          <label for="support" class="fs-body-m query-support">
+            <input type="radio" name="query" id="support" value="support">
+            Support Request
+          </label>
+          <p class="error-message">Please select a query type</p>
+        </div>
       </div>
       
       <div class="message-grid-item">
