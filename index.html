@@ -5,20 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Contact form</title>
 
 </head>
 <body>
   <form id="form" action="/" method="get">
-    <h1>Contact Us</h1>
+    <h1 class="fw-bold">Contact Us</h1>
   
     <div class="grid-container">
 
       <div class="fname-grid-item">
         <label for="fname">
           First Name
-          <input type="text" name="fname" id="fname">
+          <input type="text" name="fname" id="fname" class="fs-body-m">
         </label>
         <p class="error-message">This field is required</p>
       </div>
@@ -26,7 +28,7 @@
       <div class="lname-grid-item">
         <label for="lname">
           Last Name
-          <input type="text" name="lname" id="lname">
+          <input type="text" name="lname" id="lname" class="fs-body-m">
         </label>
         <p class="error-message">This field is required</p>
       </div>
@@ -34,19 +36,19 @@
       <div class="email-grid-item">
         <label for="email">
           Email Address
-          <input type="email" name="email" id="email">
+          <input type="email" name="email" id="email" class="fs-body-m">
         </label>
         <p class="error-message">Please enter a valid email address</p>
         <p class="error-message">This field is required</p>
       </div>
 
       <div class="query-grid-item">
-        <label>Query Type</label>
-        <label for="general">
+        <label class="query-header-label arrow-pointer">Query Type</label>
+        <label for="general" class="fs-body-m">
           <input type="radio" name="query" id="general" value="general">
           General Enquiry
         </label>
-        <label for="support">
+        <label for="support" class="fs-body-m">
           <input type="radio" name="query" id="support" value="support">
           Support Request
         </label>
@@ -56,7 +58,7 @@
       <div class="message-grid-item">
         <label for="message">
           Message
-          <textarea name="message" id="message"></textarea>
+          <textarea name="message" id="message" class="fs-body-m"></textarea>
         </label>
         <p class="error-message">This field is required</p>
       </div>
@@ -69,12 +71,12 @@
         <p class="error-message">To submit this form, please consent to being contacted</p>
       </div>
       
-      <button type="submit" class="submit-grid-item">Submit</button>
+      <button type="submit" class="submit-grid-item submit-button fs-body-m fw-bold">Submit</button>
     </div>
   </form>
 
   <div class="success-message" style="display: none;">
-    <p>Message Sent!</p>
+    <p class="fw-bold">Message Sent!</p>
     <p>Thanks for completing the form. We'll be in touch soon!</p>
   </div>
 </body>
