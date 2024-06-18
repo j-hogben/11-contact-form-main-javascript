@@ -89,7 +89,7 @@ label:not(.arrow-pointer), input, textarea, .submit-button {
 }
 
 /* Display block for text and email inputs, and query type label */
-input[type="text"], input[type="email"], .query-header-label {
+input[type="text"], .query-header-label {
   display: block;
 }
 
@@ -147,9 +147,29 @@ h1 {
 }
 
 /* FORM SPACING */
-form input[type="text"],
-form input[type="email"] {
+.grid-container {
+  margin-top: var(--sp-400);
+}
+
+input[type="text"] {
   width: 100%;
+}
+
+input[type="text"],
+textarea {
+  margin-top: var(--sp-100);
+}
+
+.query-header-label {
+  margin-bottom: var(--sp-200);
+}
+
+.error-message {
+  margin-top: var(--sp-100);
+}
+
+.consent-grid-item {
+  margin-block: var(--sp-200);
 }
 
 /* GRID LAYOUT */
@@ -199,8 +219,50 @@ form input[type="email"] {
   }
 }
 
+/* INPUT STYLING */
+.input-border {
+  padding: var(--sp-150) var(--sp-300);
+  border: 1px solid var(--green-500);
+  border-radius: var(--br-element); 
+}
+
+.input-border:hover,
+.input-border:focus,
+.input-border:focus-within {
+  outline: none;
+  border-color: var(--green-600);
+}
+
+textarea {
+  min-height: 15em;
+}
+
+@media (min-width: 40em) {
+  textarea {
+    min-height: 8.25em;
+  }
+}
+
+@media (min-width: 60em) {
+  textarea {
+    min-height: 6.5625em;
+  }
+}
+
+
+
+
 
 /* ERROR STATES */
 .error-message {
   color: var(--red-error);
+}
+
+.error-state,
+.error-state:hover {
+  border: 1px solid var(--red-error);
+}
+
+.display-error-message {
+  display: block;
 }

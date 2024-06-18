@@ -6,13 +6,14 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
   
   <title>Frontend Mentor | Contact form</title>
 
 </head>
 <body>
-  <form id="form" action="/" method="get">
+  <form id="form" action="/">
     <h1 class="fw-bold">Contact Us</h1>
   
     <div class="grid-container">
@@ -20,49 +21,48 @@
       <div class="fname-grid-item">
         <label for="fname">
           First Name
-          <input type="text" name="fname" id="fname" class="fs-body-m">
+          <input type="text" name="fname" id="fname" class="fs-body-m input-border">
         </label>
-        <p class="error-message">This field is required</p>
+        <p class="error-message"></p>
       </div>
       
       <div class="lname-grid-item">
         <label for="lname">
           Last Name
-          <input type="text" name="lname" id="lname" class="fs-body-m">
+          <input type="text" name="lname" id="lname" class="fs-body-m input-border">
         </label>
-        <p class="error-message">This field is required</p>
+        <p class="error-message"></p>
       </div>
       
       <div class="email-grid-item">
         <label for="email">
           Email Address
-          <input type="email" name="email" id="email" class="fs-body-m">
+          <input type="text" name="email" id="email" class="fs-body-m input-border">
         </label>
-        <p class="error-message">Please enter a valid email address</p>
-        <p class="error-message">This field is required</p>
+        <p class="error-message"></p>
       </div>
 
       <div class="query-grid-item">
         <label class="query-header-label arrow-pointer">Query Type</label>
         <div class="query-type">
-          <label for="general" class="fs-body-m query-general">
-            <input type="radio" name="query" id="general" value="general">
+          <label for="queryGeneral" class="fs-body-m query-general input-border">
             General Enquiry
+            <input type="radio" name="query" id="queryGeneral" value="general">
           </label>
-          <label for="support" class="fs-body-m query-support">
-            <input type="radio" name="query" id="support" value="support">
+          <label for="querySupport" class="fs-body-m query-support input-border">
+            <input type="radio" name="query" id="querySupport" value="support">
             Support Request
           </label>
-          <p class="error-message">Please select a query type</p>
+          <p class="error-message"></p>
         </div>
       </div>
       
       <div class="message-grid-item">
         <label for="message">
           Message
-          <textarea name="message" id="message" class="fs-body-m"></textarea>
+          <textarea name="message" id="message" class="fs-body-m input-border"></textarea>
         </label>
-        <p class="error-message">This field is required</p>
+        <p class="error-message"></p>
       </div>
 
       <div class="consent-grid-item">
@@ -70,7 +70,7 @@
           <input type="checkbox" name="consent" id="consent">
           I consent to being contacted by the team
         </label>
-        <p class="error-message">To submit this form, please consent to being contacted</p>
+        <p class="error-message"></p>
       </div>
       
       <button type="submit" class="submit-grid-item submit-button fs-body-m fw-bold">Submit</button>
